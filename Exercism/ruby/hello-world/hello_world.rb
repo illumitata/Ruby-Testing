@@ -1,11 +1,8 @@
 class HelloWorld
-
-  def hello
-    puts("Hello, World!")
-  end
+  attr_accessor :text
 
   def self.hello
-    puts("Hello, World!")
+    @text = "Hello, World!"
   end
 
 end
