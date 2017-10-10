@@ -5,7 +5,11 @@
 class Year
 
   def self.leap?(year)
-    #niezależnie co napiszę tylko działa jeden raz
+    year%4 == 0 && (year%100 != 0 || year%400 == 0)
   end
-  
+
+end
+
+module BookKeeping
+  VERSION = 3
 end
