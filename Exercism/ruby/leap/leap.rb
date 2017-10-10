@@ -1,11 +1,11 @@
-class Date
+#module BookKeeping
+#    VERSION = 3
+#end
 
-  def leap?
+class Year
 
+  def self.leap?(year)
+    #niezależnie co napiszę tylko działa jeden raz
   end
-
-end
-
-class Year < Date
-
+  
 end
