@@ -4,7 +4,7 @@ require_relative 'nth_prime'
 # Common test data version: 1.0.0 016d65b
 class NthPrimeTest < Minitest::Test
   def test_first_prime
-    # skip
+    #skip
     assert_equal 2, Prime.nth(1)
   end
 

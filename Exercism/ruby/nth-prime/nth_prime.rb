@@ -1,9 +1,12 @@
 class Prime
 
   def self.nth(number)
-    
+#
+# => prosty algorytm modulo
+#
+
     if(number==0)
-      return puts("Error")
+      raise ArgumentError
     else
       wynik = 0
       lp = 0
