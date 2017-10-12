@@ -8,11 +8,9 @@ class Sieve
 
     arr = Array.new
 
-    if(@num<=1)
+    if(@num<2)
       return arr
     else
-
-      result = Array.new
 
       #limit for ellimiation process
       @limit = Math.sqrt(@num)
@@ -23,16 +21,18 @@ class Sieve
         arr[i] = i
       end
 
-      arr.delete(0)
-      arr.delete(1)
-
       #looking for multiplying values
       (2..@limit).each do |m|
-        arr.delete_if { |a| if arr[a] != m && arr[a] != nil
-                                arr[a].modulo(m) == 0
-                            end
-                      }
+        arr.each do |i|
+          if arr[i]!=m && arr[i]%m==0
+            arr[i] = 0
+          end
+        end
       end
+
+      #getting rid of 0's and 1
+      arr.delete(0)
+      arr.delete(1)
 
       return arr
     end
